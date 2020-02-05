@@ -1,0 +1,248 @@
+alias job="IT Job Category"
+alias full="Full Stack Engineer"
+alias frontend="Front-end Engineer"
+alias backend="Back-end Engineer"
+alias mobile="Mobile"
+alias web="Web"
+alias application="Desktop"
+alias nativeapp="Native App"
+alias webapp="Web App"
+alias nonresp="Non responsive App"
+alias resp="Responsive App"
+alias it="Software Engineer"
+alias business="Business Department"
+alias researcher="Research Institute"
+alias intelligence="Intelligence"
+alias system="System"
+
+job->"Technical Project Manager"
+job->"Project Manager"
+job->"UI Designer"
+job->"UX Designer"
+job->"Service Designer"
+job->it
+it->business
+it->researcher
+job->"Marketer"
+job->"HR"
+
+
+business->full
+
+full->frontend
+full->backend
+
+frontend->mobile
+frontend->web
+frontend->application
+
+application->"Windows"
+"Windows"->"WinForm"
+"Windows"->"WPF"
+
+application->"Mac"
+application->"Both "
+"Both "->"Electron"
+
+mobile->nativeapp
+nativeapp->"Android"
+nativeapp->"IOS"
+nativeapp->"both"
+"both"->"React Native"
+
+mobile->webapp
+mobile->"Hybrid"
+
+web->nonresp
+web->resp
+web->"web framework"
+"web framework"->"react"
+"web framework"->"vue.js"
+"web framework"->"angular"
+
+nonresp->"html"
+"html"->"html5"
+nonresp->"javascript"
+"javascript"->"jquery"
+nonresp->"css"
+resp->"Bootstrap"
+resp->"Foundation"
+
+alias was="Web Application Server"
+backend->"Web Server"
+"Web Server"->"Apache Tomcat"
+"Web Server"->"NginX"
+"Web Server"->"Jetty"
+"Web Server"->"IIS"
+
+backend->was
+was->"Python Django"
+was->"Python Flask"
+was->"Java Spring Boot"
+was->"Java DropWizard"
+was->"go gin"
+
+
+alias devops="DevOps Engineer"
+alias sysops="SysOps Engineer"
+alias qa="QA Engineer"
+alias data="Data Analyst"
+alias AI="AI Engineer"
+alias cloud="Cloud Engineer"
+alias sre="Site Reliability Engineer"
+alias architect="Architect"
+
+qa->"client"
+qa->"server"
+qa->"functional Test"
+qa->"non-functional Test"
+# sanity,unit,smoke,blackbox,whitebox
+# load test, perf test
+
+#Business Department
+business->devops
+alias iac="IAC(Infrastructure As Code)"
+alias cicd="CI/CD"
+alias ci="CI(Continous Integeration)"
+alias cd="CD(Continous Deployment)"
+alias cd1="CD(Continous Delivery)"
+
+devops->cicd
+cicd->ci
+ci->"Circle CI"
+ci->"Gitlab CI"
+ci->"Jenkins"
+"Jenkins"->"Jenkins BlueOcean"
+"Jenkins"->"Jenkins X"
+
+cicd->"CD"
+cicd->"CD"
+"CD"->cd
+"CD"->cd1
+"CD"->"CD tools"
+"CD tools"->"Spinnaker"
+"CD tools"->"Jenkins "
+"CD tools"->"AWS CodeDeploy"
+"CD tools"->"Ansible"
+"CD tools"->"Chef"
+"CD tools"->"Puppet"
+
+
+devops->iac
+iac->"Terraform"
+
+business->sysops
+sysops->"Monitoring"
+sysops->"Logging"
+sysops->"Alerting"
+"Alerting"->"Nagios"
+"Alerting"->"Pagerduty"
+"Logging"->"ELK"
+"Logging"->"EFK"
+"Logging"->"Stackdriver"
+"Logging"->"Sumologic"
+"Monitoring"->"Dynatrace"
+"Monitoring"->"Monitoring"
+"Monitoring"->"APM"
+"APM"->"NewRelic"
+"APM"->"Jennifer"
+business->qa
+business->data
+business->AI
+business->cloud
+
+cloud->"Cloud Provider"
+"Cloud Provider"->"GCP"
+"Cloud Provider"->"AWS"
+"Cloud Provider"->"Azure"
+
+business->architect
+
+
+# Architect
+alias ta="TA(Technical Architect)"
+architect->ta
+ta->"Infrastructure"
+ta->"Network"
+ta->"Security"
+alias da="DA(Data Architect)"
+architect->da
+da->"Relational DB"
+da->"NoSQL"
+alias dba="DBA(Database Administrator)"
+architect->dba
+dba->"RDBMS"
+"RDBMS"->"Oracle"
+"RDBMS"->"MySQL"
+"RDMBS"->"Postgresql"
+dba->"Cache"
+"Cache"->"redis"
+"Cache"->"memcahced"
+dba->"NODBMS"
+"NODBMS"->"Couchbase"
+"NODBMS"->"Cassandra"
+"NODBMS"->"MongoDB"
+"NODBMS"->"hbase"
+dba->"Queue"
+"Queue"->"Kafka"
+"Queue"->"RabbitMQ"
+
+
+
+
+architect->"AA(Application Architect)"
+architect->"SA(Solution Architect)"
+
+# Research Insititude
+alias intelligence="intelligence"
+alias ai="Artificial Intelligence"
+alias machine="Machine Learning"
+researcher->intelligence
+intelligence->ai
+ai->machine
+machine->"Deep Learning"
+"Deep Learning"->"Supervised Learning"
+"Deep Learning"->"Unsupervised Learning"
+
+alias cv="Computer Vision"
+intelligence->cv
+alias cp="Computational photography"
+cv->cp
+cp->"Photo enhancement"
+cp->"Panorama Creation"
+cp->"image and video completion"
+cp->"style tranfer"
+cp->"face beautification"
+cv->"3D Modeling"
+cv->"Face and gestures"
+cv->"Object segmentation,classification and recognition"
+cv->"Video analytics"
+cv->"Image and language understanding"
+cv->"Interactive Vision"
+intelligence->"Graphics & Multimedia"
+intelligence->"HCI(Human Computer Interaction)"
+intelligence->"Human Language Technology"
+intelligence->"Search & Information retrieval"
+
+# System
+researcher->system
+system->"Data Visualization,Analytics & Platform"
+system->"Hardware, devices & Quantum Computing"
+system->"Programming Language & Software Engineering"
+system->"Security, Privacy & Cryptography"
+system->"Systems & Networking"
+
+researcher->"Theory"
+"Theory"->"Algorithm"
+"Theory"->"Mathematics"
+
+researcher->"Other Science"
+"Other Science"->"Ecology & environment"
+"Other Science"->"Economics"
+"Other Science"->"Medical & Health, genomics"
+"Other Science"->"Social sciences"
+"Other Science"->"Technology for emerging markets"
+
+
+
+render->WebGL,SVG,Canvas
